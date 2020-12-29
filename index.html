@@ -9,10 +9,23 @@
     <title>Etch-A-Sketch</title>
 </head>
 <body>
-    <div id="container"></div>
-    <script src="./assets/js/script.js"></script>
-    <form>
+    
+    <div id="container">
+
+        <p>Etch A Sketch!</p>
+
+        <form>
+            <label for="sides">Number of squares per row/column (2-20):</label>
+
+            <input type="number" id="sides" name="sides"
+                min="2" max="20">
+        </form>
+
+        <div id="etchContainer"></div>
         
-    </form>
+        <button type="button">Reset</button>
+   
+    </div>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>

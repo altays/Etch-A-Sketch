@@ -28,13 +28,14 @@ window.onload = (event) => {createGrid(16)};
 let createGrid = sideNum => {
     // console.log(sideNum);
 
-    let container = document.querySelector("#container")
+    let etch = document.querySelector("#etchContainer")
 
     // console.log(container)
 
     for (let i = 0; i < sideNum * sideNum; i++) {
         let nestedDiv = document.createElement("div")
-        container.appendChild(nestedDiv);
+        nestedDiv.classList.add("etchDiv")
+        etch.appendChild(nestedDiv);
     }
 
 }
