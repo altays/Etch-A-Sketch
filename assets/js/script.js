@@ -1,15 +1,3 @@
-// create an init function  (done)
-    // Create 16 x 16 square of divs
-    // nest within a DOMcontent loaded event
-    // target the container
-    // create a variable for dimensions, set to 16
-    // loop over creating divs in container
-
-// in css, 
-    //set dimensions for container (960px wide) as well as logic for placing divs using flex and grid -> WIP
-    // set color of background, container
-    // set two colors for contained divs - starting and changed
-
 // set a "hover" effect so the grid divs change color when mouse passes over them -> use an event listener to add a class
     // don't use the add / remove class method, but the one that alternates
 
@@ -26,16 +14,37 @@
 window.onload = (event) => {createGrid(16)};
 
 let createGrid = sideNum => {
-    // console.log(sideNum);
-
+ 
     let etch = document.querySelector("#etchContainer")
-
-    // console.log(container)
 
     for (let i = 0; i < sideNum * sideNum; i++) {
         let nestedDiv = document.createElement("div")
-        nestedDiv.classList.add("etchDiv")
+        nestedDiv.classList.add("etchDiv", "etchDivStart")
+        // attach event listener - mouseover, toggle class
+        nestedDiv.addEventListener("mouseover",function(event) {
+            toggleColor(event)
+        })
         etch.appendChild(nestedDiv);
     }
 
+}
+
+
+toggleColor = function (event){
+    console.log(event.target.classList)
+    // console.log(event.target.className.split(" ")[1])
+
+    let state = event.target.classList[1]
+    if (state == "etchDivStart"){
+        // console.log("true")
+        // state = "etchDivOver"
+        event.target.classList.remove("etchDivStart")
+        event.target.classList.add("etchDivOver")
+        // event.target.classList("etchDivOver")
+    } else if (state = "etchDivOver"){
+        // console.log("false")
+        // state = "etchDivStart"
+        event.target.classList.add("etchDivStart")
+        event.target.classList.remove("etchDivOver")
+    }
 }
