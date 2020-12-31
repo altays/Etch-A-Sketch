@@ -1,2 +1,2 @@
-# Etch-a-sketch
+# Etch-A-sketch
 Created for the Odin Project Web Dev 101 course.
