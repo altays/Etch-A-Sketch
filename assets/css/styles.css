@@ -1,16 +1,21 @@
-/* links */
+a {
+    text-decoration: none;
+    color: #3a4394;
+}
 
 body {
-    background-color: grey;
+    background-color: rgb(223, 221, 221);
     display:flex;
     justify-content:center;
     align-items:center;
-    /* text */
+    flex-direction:column;
+    justify-content: space-between;
+    height:100vh;
+    font-size: 16px;
 }
 
-form {
-    display:flex;
-    align-items:center;
+button {
+    font-size: 1em;
 }
 
 #container {
@@ -25,13 +30,9 @@ form {
     width: 960px;
     background-color: whitesmoke;
     height: 500px;
-    /* grid-template-rows: repeat(auto-fill,minmax(10px,1fr)); */
-    /* grid-template-columns: repeat(auto-fill,minmax(10px,1fr)); */
-    /* how can I dynamically set the repeat number? */
 }
 
 .etchDiv {
-    /* background-color:white; */
     border: solid 2px;
     border-color: blue;
     width: 100%;
@@ -44,4 +45,26 @@ form {
 
 .etchDivStart{
     background-color:white;
+}
+
+footer {
+    padding-bottom: 2em;
+    font-size:1.5em;
+}
+
+form {
+    display:flex;
+    align-items:center;
+    margin-bottom:.75em;
+}
+
+header {
+    padding-top: .75em;
+    font-size:4em;
+}
+
+
+p {
+    margin: .5em;
+    font-size:1.2em;
 }
